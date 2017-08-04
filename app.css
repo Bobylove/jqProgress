@@ -74,5 +74,23 @@ header h1 {
 	text-align: center;
 	color: #333;
 	text-transform: uppercase;
-	
+
+}
+.description h3 {
+	margin-top: 30px;
+	padding: 10px;
+	font-size: 26px;
+	background: #d70000;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 5px;
+}
+
+.description p {
+	padding-top: 35px;
+	font-size: 22px;
+	color: #000;
+	text-align: center;
+
 }
