@@ -10,9 +10,22 @@ $(document).ready(function(){
 		$mainMenuItems.children(".images").click(function(){
 			var newIndex = $(this).parent().index(),
 			$item = $mainMenuItems.eq(newIndex);
+			if (openedIndex === newIndex) {
+				animateItem($item, false, 250);
+				openedIndex = -1;
+
+			}else{
+
+			}
+			
 			animateItem($item, true, 250);
 			openedIndex = newIndex;
 		});
+	},
+
+	validIndex = function(indexToCheck){
+		return (indexToCheck >= 0) && (indexToCheck < totalMainMenuItems);
+
 	},
 
 	animateItem = function($item, toOpen, speed){
