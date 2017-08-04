@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
-	$(".par1").hide();
+	$("#p1").click( function(){
+
+		$('#p5').hide();
+	});
 
 });
