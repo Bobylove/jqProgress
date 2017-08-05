@@ -15,11 +15,14 @@ $(document).ready(function(){
 				openedIndex = -1;
 
 			}else{
+				if (validIndex(newIndex)) {
+					animateItem($mainMenuItems.eq(openedIndex), false, 250);
+					openedIndex = newIndex;
+					animateItem($item, true, 250);
+				}
 
 			}
 			
-			animateItem($item, true, 250);
-			openedIndex = newIndex;
 		});
 	},
 
