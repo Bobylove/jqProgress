@@ -8,7 +8,7 @@ $(document).ready(function(){
 	init = function(){
 		bindEvents();
 		if (validIndex(openedIndex)) {
-			animateItem($mainMenuItems, true, 700)
+			animateItem($mainMenuItems.eq(openedIndex), true, 700)
 		};
 	},
 	bindEvents = function(){
