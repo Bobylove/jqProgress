@@ -9,12 +9,15 @@ $(document).ready(function(){
 		bindEvents();
 		if (validIndex(openedIndex)) {
 			animateItem($mainMenuItems.eq(openedIndex), true, 700)
+			paragrapheAnimate();
 		};
 	},
 	bindEvents = function(){
 		$mainMenuItems.children(".images").click(function(){
 			var newIndex = $(this).parent().index();
 			checkAndAnimateItem(newIndex);
+			paragrapheAnimate(newIndex);
+			
 			
 			
 		});
@@ -29,6 +32,7 @@ $(document).ready(function(){
 		$('.button').click(function(){
 			var newIndex = $(this).index();
 			checkAndAnimateItem(newIndex);
+			paragrapheAnimate(newIndex);
 		});
 	},
 
@@ -60,7 +64,16 @@ $(document).ready(function(){
 
 		}
 
+	},
+	paragrapheAnimate = function () {
+		$('p').hide();
+		$(".p1").fadeIn(1000)
+		$('.p2').fadeIn(2000)
+		$('.p3').fadeIn(3000)
+
+
 	};
+
 
 	init();
 
